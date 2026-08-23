@@ -78,20 +78,20 @@ package, the physical SC-D70 device and its audio endpoints reported
 
 The final tested state was:
 
-  Setting / function            Result
-  ----------------------------- ------------------------------
-  Windows 11 x64                Working
-  Memory Integrity              ON
-  Secure Boot                   OFF
-  Windows Test Mode             ON
-  USB Audio (Windows/WDM)       Working
-  MIDI PART A                   Working
-  MIDI PART B                   Working
-  ASIO registration             Confirmed
-  ASIO host initialization      Confirmed
-  ASIO playback                 Working
-  ASIO tested setting           48 kHz / 480 samples (10 ms)
-  Ordinary reboot persistence   Confirmed
+| Setting / Function | Result |
+|---|---|
+| Windows 11 x64 | ✅ Working |
+| Memory Integrity | **ON** |
+| Secure Boot | **OFF** |
+| Windows Test Mode | **ON** |
+| USB Audio (Windows/WDM) | ✅ Working |
+| MIDI PART A | ✅ Working |
+| MIDI PART B | ✅ Working |
+| ASIO registration | ✅ Confirmed |
+| ASIO host initialization | ✅ Confirmed |
+| ASIO playback | ✅ Working |
+| ASIO tested setting | **48 kHz / 480 samples (10 ms)** |
+| Ordinary reboot persistence | ✅ Confirmed |
 
 ## Documentation
 
