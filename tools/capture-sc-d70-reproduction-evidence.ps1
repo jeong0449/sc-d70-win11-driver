@@ -12,7 +12,23 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Continue"
 
+# Require an elevated PowerShell session. The script is read-only, but some
+# system, driver-store, registry, and certificate-store queries are best
+# captured consistently with administrative privileges.
+$principal = New-Object Security.Principal.WindowsPrincipal(
+    [Security.Principal.WindowsIdentity]::GetCurrent()
+)
+if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Error "This script must be run from an elevated PowerShell session (Run as Administrator)."
+    exit 1
+}
+
 $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+
+# Normalize OutputDir to an absolute filesystem path. This avoids a mismatch
+# between PowerShell's current provider location and .NET's process working
+# directory when StreamWriter opens a relative path.
+$OutputDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutputDir)
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
 
 $buildOut     = Join-Path $OutputDir "sc-d70-build-package-$timestamp.txt"
@@ -165,7 +181,9 @@ try {
     $w.WriteLine("Build/package evidence capture complete.")
 }
 finally {
-    $w.Dispose()
+    if ($null -ne $w) {
+        $w.Dispose()
+    }
 }
 
 # -----------------------------------------------------------------------------
@@ -280,7 +298,9 @@ try {
     $w.WriteLine("Installed-state evidence capture complete.")
 }
 finally {
-    $w.Dispose()
+    if ($null -ne $w) {
+        $w.Dispose()
+    }
 }
 
 Write-Host ""
