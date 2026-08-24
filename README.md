@@ -91,6 +91,43 @@ The final tested state was:
 | ASIO tested setting | **48 kHz / 480 samples (10 ms)** |
 | Ordinary reboot persistence | ✅ Confirmed |
 
+### Reproduction test — 2026-08-24
+
+On 2026-08-24, the test-signing procedure was repeated from a verified
+clean baseline to determine whether the previous success was reproducible
+rather than dependent on the original experimental state.
+
+Before the reproduction test, the previous SC-D70 Driver Store package,
+installed driver and ASIO files, ASIO/COM registry entries, and local test
+certificate were removed. Windows was rebooted with Test Signing disabled,
+and the absence of these components was verified.
+
+The reproduction then started again from the original Roland Vista x64
+driver package. A **new test certificate** was created, `RDWM1012.SYS` was
+test-signed again, the catalog was regenerated with `Inf2Cat` and signed
+with the new certificate, and the resulting package was added to the
+Driver Store. After Test Signing was enabled and Windows rebooted, connecting
+the SC-D70 caused Windows to bind the device automatically to the newly
+prepared package.
+
+The reproduced installation successfully restored:
+
+- the physical Roland SC-D70 MEDIA device (`Started`);
+- Windows USB Audio, with actual playback confirmed;
+- MIDI PART A and PART B, with actual playback confirmed;
+- the SC-D70 ASIO registration and COM mapping; and
+- actual ASIO audio playback from an ASIO-capable host.
+
+A final ordinary reboot was performed with the SC-D70 installed. After
+that reboot, **Windows audio, MIDI PART A/B, and ASIO playback all remained
+functional**.
+
+Thus, the result obtained on 2026-08-23 was independently reproduced from
+a clean Windows baseline using a newly generated test certificate and
+newly signed SYS/catalog files.
+
+> **First success = discovery. Second success from a clean baseline = reproducibility.**
+
 ## Windows 11 Configuration Changes
 
 The successful persistent configuration required changes at several levels of the Windows 11 system:
@@ -259,7 +296,8 @@ sc-d70-windows11/
 
 ## Status
 
-**Proof of concept: successful on 2026-08-23.**
+**Proof of concept: successful on 2026-08-23 and independently reproduced
+from a clean baseline on 2026-08-24.**
 
 A different future goal would be a properly authorized
 production-signing path that permits:
