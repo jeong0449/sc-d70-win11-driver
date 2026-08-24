@@ -1,8 +1,6 @@
 # Roland SC-D70 on Windows 11
 
-This repository documents a 2026-08-23 experiment with the original
-**Roland SC-D70 Windows Vista 64-bit driver (1.0.0.0, 2007-01-22)** on
-Windows 11 x64.
+This repository documents an experiment conducted on 2026-08-23 to use the original **Roland SC-D70 Windows Vista 64-bit driver (1.0.0.0, 2007-01-22)** on Windows 11 x64.
 
 The main result is simple: the old driver still works functionally. When
 Windows was made to accept it, the SC-D70 provided working **USB Audio,
