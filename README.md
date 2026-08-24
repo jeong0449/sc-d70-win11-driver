@@ -145,15 +145,20 @@ Detailed commands and the experimental sequence are preserved in the documentati
 
 ## Documentation
 
--   [`docs/experimental-log-2026-08-23.md`](docs/experimental-log-2026-08-23.md)
-    --- detailed English experimental record.
--   [`docs/experimental-log-2026-08-23-ko.md`](docs/experimental-log-2026-08-23-ko.md)
-    --- detailed Korean experimental record.
+- [`docs/experimental-log-2026-08-23.md`](docs/experimental-log-2026-08-23.md)
+  — detailed English record of the original exploratory experiment and first successful installation.
+
+- [`docs/experimental-log-2026-08-23-ko.md`](docs/experimental-log-2026-08-23-ko.md)
+  — Korean record of the original exploratory experiment.
+
+- [`docs/reproduction-test-2026-08-24.md`](docs/reproduction-test-2026-08-24.md)
+  — clean-baseline reproduction test using a newly generated test certificate and newly signed driver package.
 
 The detailed logs follow the experimental sequence and preserve the
 important commands, outputs, and functional observations. Where an exact
 intermediate command was not preserved in the original record, it is not
-presented as a verbatim log entry; reproduction notes are kept separate.
+presented as a verbatim log entry; the clean-baseline reproduction test
+is documented separately.
 
 ## ASIO confirmation
 
