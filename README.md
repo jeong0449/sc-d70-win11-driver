@@ -93,6 +93,21 @@ The final tested state was:
 | ASIO tested setting | **48 kHz / 480 samples (10 ms)** |
 | Ordinary reboot persistence | ✅ Confirmed |
 
+## Windows 11 Configuration Changes
+
+The successful persistent configuration required changes at several levels of the Windows 11 system:
+
+| Level | Change / State |
+|---|---|
+| BIOS / UEFI | **Secure Boot: OFF** |
+| Windows boot configuration | **Test Signing Mode: ON** |
+| Windows Security | **Memory Integrity (HVCI): ON** — no need to disable it |
+| Driver trust / Driver Store | Original SC-D70 driver package **locally test-signed and replaced** |
+
+In other words, the experiment did **not** require disabling Memory Integrity, but it did require disabling Secure Boot, enabling Windows Test Mode, and installing a locally test-signed version of the legacy driver package.
+
+Detailed commands and the experimental sequence are preserved in the documentation under `docs/`.
+
 ## Documentation
 
 -   [`docs/experimental-log-2026-08-23.md`](docs/experimental-log-2026-08-23.md)
