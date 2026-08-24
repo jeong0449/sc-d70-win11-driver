@@ -285,18 +285,29 @@ Setup.exe
 Documentation, scripts, screenshots, hashes, and legitimate source links
 are appropriate repository content.
 
-## Suggested layout
+## Repository layout
 
-``` text
-sc-d70-windows11/
+```text
+sc-d70-win11-driver/
 ├── README.md
 ├── docs/
 │   ├── experimental-log-2026-08-23.md
-│   └── experimental-log-2026-08-23-ko.md
-├── scripts/
-│   ├── capture-sc-d70-success-state.ps1
-│   └── capture-sc-d70-build-package.ps1
-└── images/
+│   ├── experimental-log-2026-08-23-ko.md
+│   └── reproduction-test-2026-08-24.md
+└── tools/
+    ├── capture-sc-d70-reproduction-evidence.ps1
+    ├── evidence-capture.md
+    └── evidence/
+        ├── sc-d70-build-package-20260824-204218.txt
+        └── sc-d70-installed-state-20260824-204218.txt
+```
+
+The repository deliberately separates three kinds of material:
+
+```text
+docs/             = experimental records and interpretation
+tools/            = tools used to collect reproducibility evidence
+tools/evidence/   = captured machine-readable evidence
 ```
 
 ## Status
