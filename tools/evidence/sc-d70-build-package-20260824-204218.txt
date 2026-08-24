@@ -1,0 +1,132 @@
+﻿SC-D70 Windows 11 - Build Package Evidence
+Captured: 2026-08-24 20:42:18 +09:00
+PackagePath: C:\projects\SC-D70_Win11-Reproduction
+
+========================================================================================
+SYSTEM
+========================================================================================
+
+WindowsProductName WindowsVersion OsBuildNumber OsArchitecture
+------------------ -------------- ------------- --------------
+Windows 10 Pro     2009           26200         64비트
+
+========================================================================================
+PACKAGE FILE LIST
+========================================================================================
+
+Name                   Length LastWriteTime        
+----                   ------ -------------        
+RD3T1012.DAT             4088 2026-08-23 오후 4:43:30
+RDAH1012.DAT           275968 2026-08-23 오후 4:43:30
+RDAS1012.DLL           114688 2026-08-23 오후 4:43:30
+RDAW1012.DLL           102400 2026-08-23 오후 4:43:30
+RDCI1012.DLL            17920 2026-08-23 오후 4:43:30
+RDCP1012.CPL            58880 2026-08-23 오후 4:43:30
+RDDP1012.DAT           379392 2026-08-23 오후 4:43:30
+RdDrvInf.dat               47 2026-08-23 오후 4:43:30
+RDID1012.CAT             5426 2026-08-24 오후 7:54:42
+RDIF1012.INF            13470 2026-08-23 오후 4:43:30
+RdUninst.dat             1501 2026-08-23 오후 4:43:30
+RDWM1012.SYS           195096 2026-08-24 오후 7:53:03
+Readme_E.htm              549 2026-08-23 오후 4:43:30
+Readme_J.htm              514 2026-08-23 오후 4:43:30
+SC-D70-TestDriver.cer     794 2026-08-24 오후 7:50:26
+Setup.exe             1532728 2026-08-23 오후 4:43:30
+Uninstal.exe           398136 2026-08-23 오후 4:43:30
+
+========================================================================================
+CORE FILE HASHES (SHA256)
+========================================================================================
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          8A6D2957EDDFDB36012E85436CDC9A75336DC7AEF6C51C8AF34197E7859AF856       C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          4A9A9CFE6D79584806E1812D178F2988A58ADB71EB6DD94337E30B5C74F46C3A       C:\projects\SC-D70_Win11-Reproduction\RDWM1012.SYS
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          6671DDD130C28F4B7E6113033B8CBB50CEECCE7EF8224BEABCCEFE4FD4D98B17       C:\projects\SC-D70_Win11-Reproduction\RDID1012.CAT
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          C56396ACC92965013CB2F034EFB6598A2A135FBFBC3E518C726B22CBB8E43305       C:\projects\SC-D70_Win11-Reproduction\Rdas1012.dll
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          B9E3A0EA9CF6CA65EF3B10CA5C8332EEB75E488AD7B5596C1A3F87DC3433BEED       C:\projects\SC-D70_Win11-Reproduction\Rdaw1012.dll
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          DC9748A2759BDBDD149C4F9A25A60E9D3515AF5FA5818AAD9BF716ABA052B508       C:\projects\SC-D70_Win11-Reproduction\Rdah1012.dat
+
+========================================================================================
+AUTHENTICODE - RDWM1012.SYS
+========================================================================================
+
+
+Status        : Valid
+StatusMessage : 서명이 검증되었습니다.
+Subject       : CN=SC-D70 Win11 Test Driver
+Thumbprint    : C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+NotBefore     : 2026-08-24 오후 7:39:58
+NotAfter      : 2027-08-24 오후 7:59:58
+
+========================================================================================
+AUTHENTICODE - RDID1012.CAT
+========================================================================================
+
+
+Status        : Valid
+StatusMessage : 서명이 검증되었습니다.
+Subject       : CN=SC-D70 Win11 Test Driver
+Thumbprint    : C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+NotBefore     : 2026-08-24 오후 7:39:58
+NotAfter      : 2027-08-24 오후 7:59:58
+
+========================================================================================
+INF KEY LINES
+========================================================================================
+
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:10:CatalogFile=RDID1012.CAT
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:11:DriverVer=01/22/2007,1.00.00.0000
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:29:rdas1012.dll=1
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:30:rdaw1012.dll=1
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:31:rdah1012.dat=1
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:46:%RDID0012DeviceDesc%=RDID0012Install, USB\VID_0582&PID_000C ; SC-D70
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:85:AddService = RDID1012, 0x00000002, RDID0012_Service_Inst
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:108:rdas1012.dll
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:111:rdaw1012.dll
+C:\projects\SC-D70_Win11-Reproduction\RDIF1012.INF:112:rdah1012.dat
+
+========================================================================================
+CERTIFICATE STORES
+========================================================================================
+
+
+Subject       : CN=SC-D70 Win11 Test Driver
+Thumbprint    : C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+HasPrivateKey : True
+NotBefore     : 2026-08-24 오후 7:39:58
+NotAfter      : 2027-08-24 오후 7:59:58
+
+
+Subject       : CN=SC-D70 Win11 Test Driver
+Thumbprint    : C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+HasPrivateKey : False
+NotBefore     : 2026-08-24 오후 7:39:58
+NotAfter      : 2027-08-24 오후 7:59:58
+
+
+Subject       : CN=SC-D70 Win11 Test Driver
+Thumbprint    : C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+HasPrivateKey : False
+NotBefore     : 2026-08-24 오후 7:39:58
+NotAfter      : 2027-08-24 오후 7:59:58
+
+========================================================================================
+END
+========================================================================================
+Build/package evidence capture complete.

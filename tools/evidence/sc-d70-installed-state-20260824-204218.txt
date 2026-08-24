@@ -1,0 +1,189 @@
+﻿SC-D70 Windows 11 - Installed State Evidence
+Captured: 2026-08-24 20:42:23 +09:00
+
+========================================================================================
+BOOT CONFIGURATION
+========================================================================================
+
+Windows 부팅 관리자
+--------------------
+identifier              {bootmgr}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+description             Windows Boot Manager
+locale                  ko-KR
+inherit                 {globalsettings}
+default                 {current}
+resumeobject            {9952f073-8e82-11ef-a4aa-e11bf2a1a69c}
+displayorder            {current}
+toolsdisplayorder       {memdiag}
+timeout                 0
+
+Windows 부팅 로더
+-------------------
+identifier              {current}
+device                  partition=C:
+path                    \WINDOWS\system32\winload.efi
+description             Windows 11
+locale                  ko-KR
+inherit                 {bootloadersettings}
+recoverysequence        {9952f075-8e82-11ef-a4aa-e11bf2a1a69c}
+displaymessageoverride  Recovery
+recoveryenabled         Yes
+testsigning             Yes
+isolatedcontext         Yes
+allowedinmemorysettings 0x15000075
+osdevice                partition=C:
+systemroot              \WINDOWS
+resumeobject            {9952f073-8e82-11ef-a4aa-e11bf2a1a69c}
+nx                      OptIn
+bootmenupolicy          Standard
+hypervisorlaunchtype    Auto
+
+========================================================================================
+DRIVER STORE - RDIF1012 / ROLAND / SC-D70
+========================================================================================
+
+  특성:         Legacy
+  WHCP 버전:       알 수 없음
+  
+  게시된 이름:     oem76.inf
+> 원래 이름:      rdif1012.inf
+> 공급자 이름:      Roland
+  클래스 이름:      MEDIA
+  클래스 GUID:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+  드라이버 버전:     01/22/2007 1.0.0.0
+> 서명자 이름:        SC-D70 Win11 Test Driver
+  특성:         Legacy
+  WHCP 버전:       알 수 없음
+  
+  게시된 이름:     oem72.inf
+  원래 이름:      realtekapo.inf
+  공급자 이름:      Realtek
+  클래스 이름:      SoftwareComponent
+  클래스 GUID:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+
+========================================================================================
+CONNECTED PHYSICAL DEVICE
+========================================================================================
+
+                              SCSI\DiskNVMe____
+                              SCSI\NVMe____SAMSUNG_MZALQ512F
+                              NVMe____SAMSUNG_MZALQ512F
+                              GenDisk
+  호환 가능 ID:             SCSI\Disk
+                              SCSI\RAW
+                              Disk1667
+  
+> 인스턴스 ID:                USB\VID_0582&PID_000C\6&197fd1e3&0&4
+  장치 설명:         Roland SC-D70
+  클래스 이름:                 MEDIA
+  클래스 GUID:                 {4d36e96c-e325-11ce-bfc1-08002be10318}
+  제조업체 이름:          Roland
+  상태:                     시작됨
+  드라이버 이름:                oem76.inf
+> 하드웨어 ID:               USB\VID_0582&PID_000C&REV_0100
+>                             USB\VID_0582&PID_000C
+  호환 가능 ID:             USB\COMPAT_VID_0582&Class_FF&SubClass_02&Prot_00
+                              USB\COMPAT_VID_0582&Class_FF&SubClass_02
+                              USB\COMPAT_VID_0582&Class_FF
+                              USB\Class_FF&SubClass_02&Prot_00
+                              USB\Class_FF&SubClass_02
+                              USB\Class_FF
+  
+  인스턴스 ID:                SWD\MMDEVAPI\{0.0.0.00000000}.{55c55c40-34c9-4927-ab27-b92621e1eb73}
+  장치 설명:         OUT(Roland SC-D70)
+  클래스 이름:                 AudioEndpoint
+  클래스 GUID:                 {c166523c-fe0c-4a94-a586-f1a80cfbbf3e}
+  제조업체 이름:          Microsoft
+
+========================================================================================
+PNP DEVICE / ENDPOINT SUMMARY
+========================================================================================
+
+Status Class          FriendlyName           InstanceId                                                          
+------ -----          ------------           ----------                                                          
+OK     AudioEndpoint  IN(Roland SC-D70)      SWD\MMDEVAPI\{0.0.1.00000000}.{C015618F-43B5-4C3A-90B0-C911A40E11C7}
+OK     AudioEndpoint  OUT(Roland SC-D70)     SWD\MMDEVAPI\{0.0.0.00000000}.{55C55C40-34C9-4927-AB27-B92621E1EB73}
+OK     MEDIA          Roland SC-D70          USB\VID_0582&PID_000C\6&197FD1E3&0&4                                
+OK     MidiEndpoint   Roland SC-D70          SWD\MIDISRV\MIDIU_KSA_7685147921777411643                           
+OK     SoftwareDevice Roland SC-D70          SWD\MMDEVAPI\MIDIU_KSA_7685147921777411643_0_0                      
+OK     SoftwareDevice Roland SC-D70 MIDI IN  SWD\MMDEVAPI\MIDIU_KSA_7685147921777411643_0_1                      
+OK     SoftwareDevice Roland SC-D70 MIDI OUT SWD\MMDEVAPI\MIDIU_KSA_7685147921777411643_1_2                      
+OK     SoftwareDevice Roland SC-D70 PART A   SWD\MMDEVAPI\MIDIU_KSA_7685147921777411643_1_0                      
+OK     SoftwareDevice Roland SC-D70 PART B   SWD\MMDEVAPI\MIDIU_KSA_7685147921777411643_1_1
+
+========================================================================================
+INSTALLED FILE PRESENCE
+========================================================================================
+C:\Windows\System32\drivers\RDWM1012.SYS	True
+C:\Windows\System32\Rdas1012.dll	True
+C:\Windows\SysWOW64\Rdaw1012.dll	True
+C:\Windows\SysWOW64\Rdah1012.dat	True
+
+========================================================================================
+INSTALLED FILE HASHES (SHA256)
+========================================================================================
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          4A9A9CFE6D79584806E1812D178F2988A58ADB71EB6DD94337E30B5C74F46C3A       C:\Windows\System32\drivers\RDWM1012.SYS
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          C56396ACC92965013CB2F034EFB6598A2A135FBFBC3E518C726B22CBB8E43305       C:\Windows\System32\Rdas1012.dll
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          B9E3A0EA9CF6CA65EF3B10CA5C8332EEB75E488AD7B5596C1A3F87DC3433BEED       C:\Windows\SysWOW64\Rdaw1012.dll
+
+Algorithm       Hash                                                                   Path                                                                                                                                                                                                                 
+---------       ----                                                                   ----                                                                                                                                                                                                                 
+SHA256          DC9748A2759BDBDD149C4F9A25A60E9D3515AF5FA5818AAD9BF716ABA052B508       C:\Windows\SysWOW64\Rdah1012.dat
+
+========================================================================================
+INSTALLED KERNEL DRIVER AUTHENTICODE
+========================================================================================
+
+Status StatusMessage Subject                     Thumbprint                              
+------ ------------- -------                     ----------                              
+ Valid 서명이 검증되었습니다.  CN=SC-D70 Win11 Test Driver C8E297C15B13589FEFEDBEE13AC498F8CB630B12
+
+========================================================================================
+ASIO / COM REGISTRY
+========================================================================================
+HKLM:\SOFTWARE\ASIO\Roland SC-D70	True
+HKLM:\SOFTWARE\WOW6432Node\ASIO\Roland SC-D70	True
+HKLM:\SOFTWARE\Classes\CLSID\{4C258F3C-BDB2-4183-A5B5-C2BB845B426B}	True
+HKLM:\SOFTWARE\Classes\WOW6432Node\CLSID\{4C258F3C-BDB2-4183-A5B5-C2BB845B426B}	True
+
+========================================================================================
+ASIO COM MAPPING
+========================================================================================
+
+ASIO64                               ASIO32                              
+------                               ------                              
+\\?\C:\WINDOWS\system32\Rdas1012.dll \\?\C:\WINDOWS\system32\Rdaw1012.dll
+
+========================================================================================
+CERTIFICATE TRUST
+========================================================================================
+Cert:\LocalMachine\Root\C8E297C15B13589FEFEDBEE13AC498F8CB630B12	True
+Cert:\LocalMachine\TrustedPublisher\C8E297C15B13589FEFEDBEE13AC498F8CB630B12	True
+
+========================================================================================
+MANUAL FUNCTIONAL TESTS
+========================================================================================
+These are intentionally not inferred by the script.
+Record them in the reproduction log:
+  Windows USB Audio actual playback : PASS / FAIL
+  MIDI PART A actual playback       : PASS / FAIL
+  MIDI PART B actual playback       : PASS / FAIL
+  ASIO host loading                 : PASS / FAIL
+  ASIO actual audio playback        : PASS / FAIL
+  Ordinary reboot persistence       : PASS / FAIL
+
+========================================================================================
+END
+========================================================================================
+Installed-state evidence capture complete.
